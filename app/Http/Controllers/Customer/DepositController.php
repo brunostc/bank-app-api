@@ -24,7 +24,7 @@ class DepositController extends Controller {
 
     public function store(Request $request) {
         $this->validate($request, [
-            'amount' => ['integer', 'required', 'max:100000000'],
+            'amount' => ['integer', 'required', 'max:100000000', 'min:0'],
             'check_image' => ['required', 'image', 'max:5120']
         ]);
 
